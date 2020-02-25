@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    body {text-align:center}
+  </style>
+  <head>
+    <title> calculator </title>
+  </head>
+  <body>
+    <div class = "wrap">
+      <form name ="cal">
+        <h1>
+          Camera Settings Calculator
+        </h1>
+        <text>Time of day:</text>
+        <input type ="button" value ="Daytime" onclick = "cal.display1.value+='Daytime '">
+        <input type ="button" value ="Nighttime" onclick = "cal.display1.value+='Nighttime '">
+        <br><br>
+        <text>Location:</text>
+        <input type ="button" value ="Inside" onclick = "cal.display1.value+='Inside '">
+        <input type ="button" value ="Outside" onclick = "cal.display1.value+='Outside '">
+        <br><br>
+        <text>Lens:</text>
+        <input type ="button" value ="18-35mm" onclick = "cal.display1.value+='18-35mm'">
+        <input type ="button" value ="24-70mm" onclick = "cal.display1.value+='24-70mm'">
+        <input type ="button" value ="50mm" onclick = "cal.display1.value+='50mm'">
+        <input type ="button" value ="70-200mm" onclick = "cal.display1.value+='70-200mm'">
+        <br><br>
+        <button class="refresh-button">RESET</button>
+        
+         <input id="display1" type="text" /><button onclick="btn001()">CONFIRM</button>
+ <p id="message001"></p>
+
+<script>
+function btn001() {
+var text001;
+var settings1 = display1.value;
+switch (settings1) {
+
+case "Daytime Inside 18-35mm":
+text001 = "Portrait: shutter speed 80, iso 400\nSports: shutter speed 500, iso 800";
+break;
+case "Daytime Inside 24-70mm":
+    text001 = "Portrait: shutter speed 80, iso 800\nSports: shutter speed 500, iso 1600";
+    break;
+    case "Daytime Inside 50mm":
+text001 = "Portrait: shutter speed 80, iso 400\nSports: shutter speed 500, iso 800";
+break;
+case "Daytime Inside 70-200mm":
+    text001 = "Portrait: shutter speed 80, iso 400\nSports: shutter speed 500, iso 800";
+    break;
+
+case "Daytime Outside 18-35mm":
+text001 = "Portrait: shutter speed 80, iso 100\nSports: shutter speed 500, iso 400";
+break;
+case "Daytime Outside 24-70mm":
+    text001 = "Portrait: shutter speed 80, iso 200\nSports: shutter speed 500, iso 200";
+    break;
+    case "Daytime Outside 50mm":
+text001 = "Portrait: shutter speed 80, iso 100\nSports: shutter speed 500, iso 100";
+break;
+case "Daytime Outside 70-200mm":
+    text001 = "Portrait: shutter speed 80, iso 200\nSports: shutter speed 500, iso 100";
+    break;
+      
+case "Nighttime Inside 18-35mm":
+text001 = "Portrait: shutter speed 80, iso 100\nSports: shutter speed 500, iso 1600";
+break;
+case "Nighttime Inside 24-70mm":
+    text001 = "Portrait: shutter speed 80, iso 3200\nSports: shutter speed 500, iso 3200";
+    break;
+    case "Nighttime Inside 50mm":
+text001 = "Portrait: shutter speed 80, iso 800\nSports: shutter speed 500, iso 1600";
+break;
+case "Nighttime Inside 70-200mm":
+    text001 = "Portrait: shutter speed 80, iso 1600\nSports: shutter speed 500, iso 3200";
+    break;
+
+case "Nighttime Outside 18-35mm":
+text001 = "Portrait: shutter speed 80, iso 800\nSports: shutter speed 500, iso 1600";
+break;
+case "Nighttime Outside 24-70mm":
+    text001 = "Portrait: shutter speed 80, iso 1600\nSports: shutter speed 500, iso 3200";
+    break;
+    case "Nighttime Outside 50mm":
+text001 = "Portrait: shutter speed 80, iso 800\nSports: shutter speed 500, iso 1600";
+break;
+case "Nighttime Outside 70-200mm":
+    text001 = "Portrait: shutter speed 80, iso 800\nSports: shutter speed 500, iso 3200";
+    break;
+    default:
+            text001 = "One or more of the conditions was entered incorrectly.";
+}
+document.getElementById("message001").innerHTML = text001;
+}
+</script>
+        
+        
+      </form>
+    </div>
+  </body>
+</html>
